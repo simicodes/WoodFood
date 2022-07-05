@@ -1,13 +1,14 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const StyledNav = styled.nav`
+export const StyledNav = styled(motion.nav)`
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 70px;
 `;
 
-export const Logo = styled.div`
+export const Logo = styled(motion.div)`
   font-weight: 700;
   font-size: 25px;
 
@@ -18,7 +19,8 @@ export const Logo = styled.div`
 
 export const NavLinks = styled.div``;
 
-export const Link = styled.a`
+export const Link = styled(motion.a)`
+  display: inline-block;
   text-decoration: none;
   margin-right: 50px;
   color: ${({ theme }) => theme.fontColor};
@@ -32,7 +34,7 @@ export const Link = styled.a`
   }
 `;
 
-export const Themeicon = styled.div`
+export const Themeicon = styled(motion.div)`
   width: 50px;
   height: 50px;
   display: flex;
@@ -45,6 +47,12 @@ export const Themeicon = styled.div`
 `;
 
 export const SocialIcons = styled.div`
+  div {
+    margin-right: 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
   display: flex;
 
   a {
@@ -55,10 +63,7 @@ export const SocialIcons = styled.div`
     border: 2px solid #eeeeee;
     border-radius: 10px;
     padding: 12px;
-    margin-right: 10px;
-    &:last-child {
-      margin-right: 0;
-    }
+
     &:hover {
       color: ${({ theme }) => theme.background};
       background: #ffc14d;

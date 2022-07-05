@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { GlobalStyles } from "./components/Globals.styles";
 import styled, { ThemeProvider } from "styled-components";
 import Navbar from "./components/layout/nav/Navbar";
+import HeroSection from "./components/sections/hero-section/HeroSection";
 
 const Container = styled.div`
   height: 100vh;
@@ -34,6 +35,7 @@ function App() {
         <GlobalStyles />
         <Navbar theme={theme} toggleTheme={toggleTheme} />
         {/* <button onClick={() => toggleTheme()}>Change Theme</button> */}
+        <HeroSection />
       </Container>
     </ThemeProvider>
   );
